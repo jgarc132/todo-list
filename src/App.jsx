@@ -1,18 +1,16 @@
 import './App.css'
+import TodoList from './TodoList.jsx';
+import TodoForm from './TodoForm.jsx';
 
 function App() {
-  const todoList = [
-    {id: 1, title: "Go to work"},
-    {id: 2, title: "Eat"},
-    {id: 3, title: "Code"}
-  ];
+  
 
   return (
    <div>
     <h1>What's Next?</h1>
-    <ul>
-      {todoList.map(todo => <li key={todo.id}>{todo.title} </li>)}
-    </ul>
+    <TodoForm />
+    <TodoList />
+    
    </div>
   )
 }
