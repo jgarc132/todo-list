@@ -3,12 +3,12 @@ import { useRef } from 'react';
 
 function TodoForm({ onAddTodo }){
     const inputRef = useRef();
-    
+
     const handleAddTodo = (event) => {
         event.preventDefault();
 
     const todoTitle = event.target.todoTitle.value.trim();
-    if(todoTitle && todoTitle !== ""){
+    if(todoTitle){
         onAddTodo(todoTitle);
         event.target.reset();
         inputRef.current.focus();
