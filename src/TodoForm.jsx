@@ -3,28 +3,17 @@ import { useRef } from 'react';
 
 function TodoForm({ onAddTodo }){
     const inputRef = useRef();
+
     const handleAddTodo = (event) => {
         event.preventDefault();
-    
-    console.log('Event object:', event);
-    console.log('Event target:', event.target);
-    console.log('Input value:', event.target.todoTitle.value);
 
     const todoTitle = event.target.todoTitle.value.trim();
-    if(todoTitle && todoTitle !== ""){
+    if(todoTitle){
         onAddTodo(todoTitle);
         event.target.reset();
         inputRef.current.focus();
     }
 };
-
-
-
-
-
-
-
-
 
     return (
         <form onSubmit={handleAddTodo}>
@@ -32,7 +21,7 @@ function TodoForm({ onAddTodo }){
             <input 
             ref={inputRef}
             type="text"
-            id="todoTitle"
+            id="todoTitle"                                                                                                       
             name="todoTitle"
             placeholder={"What's Next?"}
             required
