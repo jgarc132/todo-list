@@ -1,8 +1,4 @@
-function isValidTodoTitle(title){
+export function isValidTodoTitle(title){
 
-return (
-    (title.trim()) ? true : false;
-
-);
+return title.trim() !== '';
 }
-export default isValidTodoTitle;
