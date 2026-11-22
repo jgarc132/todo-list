@@ -38,12 +38,14 @@ async function handleSubmit(event){
                 type="email"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}/>
+                required
                 <label htmlFor="password">Password</label>
                 <input
                 id="password"
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}/>
+                required
                 <button
                 type="submit"
                 disabled={isLoggingOn}>
